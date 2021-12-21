@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onmouseover="random_bg_color()">
     <div class="sidebar">
       <div class="logo_content">
         <div class="logo">
@@ -22,7 +22,7 @@
       </div>
       <ul class="nav_list">
         <li>
-          <a href="./basicdetails.html" target="_top">
+          <a href="/index.html" target="_top">
             <i class="bx bx-user"></i>
             <span class="link_name" id="audio">Basic Details</span>
           </a>
@@ -89,7 +89,16 @@
           <i class="bx bx-log-out" id="log_out" onclick="audio.play()"></i>
         </div>
       </div>
-      <!-- <button id="audio" onclick="audio.play()">click me</button> -->
+    </div>
+    <!-- code for glassmorphism profile card -->
+    <div class="home_content">
+      <div class="text">
+        <div class="card">
+          <div class="card-img">
+            <img src="profile.jpg" alt="profile" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -103,6 +112,18 @@
 
       const audio = new Audio();
       audio.src = "/mixkit-pen-click-and-release-1115.wav";
+
+      // Random color generator for background
+
+      function random_bg_color() {
+        var x = Math.floor(Math.random() * 5);
+        var y = Math.floor(Math.random() * 1);
+        var z = Math.floor(Math.random() * 10);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+        document.body.style.background = bgColor;
+      }
+      random_bg_color();
     </script>
   </body>
 </html>
