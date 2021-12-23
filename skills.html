@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Project</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="skills.css" />
     <!-- boxicon cdn link -->
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onmouseover="random_bg_color()">
     <div class="sidebar">
       <div class="logo_content">
         <div class="logo">
@@ -22,59 +23,59 @@
       </div>
       <ul class="nav_list">
         <li>
-          <a href="./basicdetails.html" target="_top">
+          <a href="index.html" target="_top">
             <i class="bx bx-user"></i>
-            <span class="link_name" id="audio">Basic Details</span>
+            <span class="link_name" id="audio">About me</span>
           </a>
-          <span class="tooltip">Basic Details</span>
+          <span class="tooltip">About me</span>
         </li>
         <li>
-          <a href="">
+          <a href="skills.html">
             <i class="bx bx-grid-alt"></i>
-            <span class="link_name">User</span>
+            <span class="link_name">My Skills</span>
           </a>
-          <span class="tooltip">Dashboard</span>
+          <span class="tooltip">My Skills</span>
         </li>
         <li>
           <a href="">
-            <i class="bx bx-chat"></i>
-            <span class="link_name">Messages</span>
+            <i class="bx bx-collection"></i>
+            <span class="link_name">Projects</span>
           </a>
-          <span class="tooltip">Dashboard</span>
+          <span class="tooltip">Projects</span>
         </li>
         <li>
           <a href="">
-            <i class="bx bxs-analyse"></i>
-            <span class="link_name">Analytics</span>
+            <i class="bx bxs-graduation"></i>
+            <span class="link_name">Academics</span>
           </a>
-          <span class="tooltip">Dashboard</span>
+          <span class="tooltip">Academics</span>
         </li>
         <li>
           <a href="">
-            <i class="bx bx-file"></i>
-            <span class="link_name">File manager</span>
+            <i class="bx bx-trophy"></i>
+            <span class="link_name">Achievments</span>
           </a>
-          <span class="tooltip">Dashboard</span>
+          <span class="tooltip">Achievments</span>
         </li>
         <li>
           <a href="">
-            <i class="bx bx-cart"></i> <span class="link_name">Order</span>
+            <i class="bx bx-run"></i> <span class="link_name">Interests</span>
           </a>
-          <span class="tooltip">Dashboard</span>
+          <span class="tooltip">Interests</span>
         </li>
         <li>
           <a href="">
             <i class="bx bx-save"></i>
             <span class="link_name">Download as PDF</span>
           </a>
-          <span class="tooltip">Download</span>
+          <span class="tooltip">Download as PDF</span>
         </li>
-        <li>
+        <!-- <li>
           <a href="">
             <i class="bx bx-cog"></i> <span class="link_name">Setting</span>
           </a>
           <span class="tooltip">Dashboard</span>
-        </li>
+        </li> -->
       </ul>
 
       <div class="profile_content">
@@ -91,8 +92,14 @@
       </div>
     </div>
 
-    <div class="home_content">
-      <div class="text">Home 2</div>
+    <div class="home_content" style="width: 100%">
+      <div class="text">
+        <div id="contact" class="primary-text">
+          <h3 style="margin-right: 160px">
+            Technical skills that I achieved and worked so far!
+          </h3>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -106,6 +113,18 @@
 
       const audio = new Audio();
       audio.src = "/mixkit-pen-click-and-release-1115.wav";
+
+      // Random color generator for background
+
+      function random_bg_color() {
+        var x = Math.floor(Math.random() * 5);
+        var y = Math.floor(Math.random() * 1);
+        var z = Math.floor(Math.random() * 10);
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+        document.body.style.background = bgColor;
+      }
+      random_bg_color();
     </script>
   </body>
 </html>
