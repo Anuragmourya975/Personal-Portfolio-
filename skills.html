@@ -19,6 +19,10 @@
     <script src="script.js"></script>
   </head>
   <body onmouseover="random_bg_color()">
+    <!-- pre-loader -->
+    <div class="loader-wrapper" style="z-index: 1">
+      <div class="kinetic"></div>
+    </div>
     <div class="sidebar">
       <div class="logo_content">
         <div class="logo">
@@ -98,7 +102,7 @@
       </div>
     </div>
 
-    <div class="home_content" style="width: 100%">
+    <div class="home_content" style="width: 100%; z-index: -1">
       <div class="text">
         <div id="contact" class="primary-text">
           <h3 style="margin-right: 160px">
@@ -353,6 +357,11 @@
           swipeThreshold: 40,
         });
       });
+      // pre-loader
+
+      window.onload = setInterval(function () {
+        document.querySelector(".loader-wrapper").style.display = "none";
+      }, 2000);
     </script>
   </body>
 </html>

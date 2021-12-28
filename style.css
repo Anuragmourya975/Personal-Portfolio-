@@ -357,8 +357,8 @@ button img:hover {
 /* pre-loader */
 .kinetic {
   position: relative;
-  height: 80px;
-  width: 80px;
+  height: 30px;
+  width: 30px;
 }
 .kinetic::after,
 .kinetic::before {
@@ -368,7 +368,7 @@ button img:hover {
   left: 0;
   width: 0;
   height: 0; */
-  border: 50px solid transparent;
+  border: 30px solid transparent;
   border-bottom-color: white;
   animation: rotateA 2s linear infinite 0.5s;
 }
@@ -409,7 +409,8 @@ button img:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #11101d;
+  padding-bottom: 90px;
+  background-color: #040006;
   display: flex;
   justify-content: center;
   align-items: center;

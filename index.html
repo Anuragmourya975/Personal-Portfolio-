@@ -181,9 +181,9 @@
 
       // pre-loader
 
-      window.onload = function () {
+      window.onload = setInterval(function () {
         document.querySelector(".loader-wrapper").style.display = "none";
-      };
+      }, 2000);
     </script>
   </body>
 </html>
