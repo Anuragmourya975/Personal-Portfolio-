@@ -12,6 +12,10 @@
     />
   </head>
   <body onmouseover="random_bg_color()">
+    <!-- pre-loader -->
+    <div class="loader-wrapper">
+      <div class="kinetic"></div>
+    </div>
     <div class="sidebar">
       <div class="logo_content">
         <div class="logo">
@@ -149,6 +153,7 @@
         </div>
       </div>
     </div>
+    <!-- </div> -->
 
     <script>
       let btn = document.querySelector("#btn");
@@ -173,6 +178,12 @@
         document.body.style.background = bgColor;
       }
       random_bg_color();
+
+      // pre-loader
+
+      window.onload = function () {
+        document.querySelector(".loader-wrapper").style.display = "none";
+      };
     </script>
   </body>
 </html>
