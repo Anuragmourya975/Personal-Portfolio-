@@ -26,6 +26,7 @@ body {
   background-color: #11101d;
   padding: 6px 14px;
   position: fixed;
+  z-index: 1;
   transition: all 0.5s ease;
 }
 .sidebar.active {
