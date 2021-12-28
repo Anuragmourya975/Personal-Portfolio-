@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Project</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="lightslider.css" />
     <!-- boxicon cdn link -->
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- slider links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="lightslider.js"></script>
+    <script src="script.js"></script>
   </head>
   <body onmouseover="random_bg_color()">
     <!-- pre-loader -->
-    <div class="loader-wrapper">
+    <div class="loader-wrapper" style="z-index: 1">
       <div class="kinetic"></div>
     </div>
     <div class="sidebar">
@@ -26,7 +33,7 @@
       </div>
       <ul class="nav_list">
         <li>
-          <a href="/index.html" target="_top">
+          <a href="index.html" target="_top">
             <i class="bx bx-user"></i>
             <span class="link_name" id="audio">About me</span>
           </a>
@@ -62,7 +69,7 @@
         </li>
         <li>
           <a href="">
-            <i class="bx bx-run"></i><span class="link_name">Interests</span>
+            <i class="bx bx-run"></i> <span class="link_name">Interests</span>
           </a>
           <span class="tooltip">Interests</span>
         </li>
@@ -94,66 +101,16 @@
         </div>
       </div>
     </div>
-    <!-- code for glassmorphism profile card -->
-    <div class="home_content">
-      <div class="text">
-        <div class="card">
-          <div class="card-img">
-            <img src="profile.jpg" alt="profile" />
-          </div>
-          <div class="desc">
-            <h6 class="primary-text101">Anurag Mourya</h6>
-            <h6 class="secondary-text">Full Stack Web Developer</h6>
 
-            <h6 class="about">
-              I am a 3rd-year student pursuing a bachelor's in computer science
-              from Mahakal Institute of technology & management Ujjain Madhya
-              Pradesh. I love to explore new technologies and leverage them to
-              solve real-life problems. I'm currently into Web Development and
-              working on my Data Structures and Algorithm skills (which is the
-              backbone of any programming language). I'm always ready to improve
-              my programming skills and adopt new technologies. I typically
-              spend my time going through problems on Codechef, HackerRank and
-              making real world projects to improve my knowledge or reading
-              technical blogs to keep up with what's happening in the software
-              engineering industry. I also make it a point to stay active by
-              having a sport or going to the gym.
-            </h6>
-            <div id="contact" class="primary-text101">
-              <button>
-                <img
-                  style="height: 28px"
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                  alt=""
-                />
-              </button>
-              <button class="primary-text101">
-                <img
-                  style="height: 28px"
-                  src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                  alt=""
-                />
-              </button>
-              <button class="primary-text101">
-                <img
-                  style="height: 28px"
-                  src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png"
-                  alt=""
-                />
-              </button>
-              <button class="primary-text101">
-                <img
-                  style="height: 28px"
-                  src="https://1000logos.net/wp-content/uploads/2021/05/Gmail-logo.png"
-                  alt=""
-                />
-              </button>
-            </div>
-          </div>
+    <div class="home_content" style="width: 100%; z-index: -1">
+      <div class="text">
+        <div id="contact" class="primary-text">
+          <h3 style="margin-right: 160px">
+            Check out some cool work i've done! &#x1F600;
+          </h3>
         </div>
       </div>
     </div>
-    <!-- </div> -->
 
     <script>
       let btn = document.querySelector("#btn");
@@ -179,6 +136,20 @@
       }
       random_bg_color();
 
+      $(document).ready(function () {
+        $("#lightSlider").lightSlider({
+          item: 2,
+          autoWidth: true,
+          loop: true,
+          onlSliderLoad: function () {
+            $("#autoWidth").removeClass("cS-hidden");
+          },
+          enableTouch: true,
+          enableDrag: true,
+          freeMove: true,
+          swipeThreshold: 40,
+        });
+      });
       // pre-loader
 
       window.onload = setInterval(function () {
